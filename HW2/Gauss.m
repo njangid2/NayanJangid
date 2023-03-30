@@ -28,7 +28,7 @@ coe0 = [h0 e0 RA0 i0 w0 TA0];
 %...Use ODE45 to integrate the Gauss variational equations (Equations
 % 12.89) from t0 to tf:
 t0 = 0;
-tf = 10*days;
+tf = 100*days;
 nout = 500000; %Number of solution points to output for plotting purposes for results in report it is 5000
 tspan = linspace(t0, tf, nout);
 options = odeset('reltol', 1.e-8, 'abstol', 1.e-8, 'initialstep', T0/1000);
