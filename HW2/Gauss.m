@@ -30,7 +30,7 @@ coe0 = [h0 e0 RA0 i0 w0 TA0];
 t0 = 0;
 % plots in report is using nout as 5000 for fast computation purpose. but to get more accurate graph it is better to use much higher value than that.
 tf = 100*days;
-nout = 500000; %Number of solution points to output for plotting purposes for results in report it is 5000
+nout = 5000; %Number of solution points to output for plotting purposes
 tspan = linspace(t0, tf, nout);
 options = odeset('reltol', 1.e-8, 'abstol', 1.e-8, 'initialstep', T0/1000);
 y0 = coe0';
