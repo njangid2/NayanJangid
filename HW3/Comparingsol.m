@@ -37,12 +37,12 @@ for o=1:1:20
         
         %Initial value of new variable L00 G00 H00 l00 g00 h00
     
-        L00(o,u)=L0(o)-(-w(u)*H0(o)*L0(o)^3);
-        G00(o,u)=G0(o);
-        H00(o,u)=H0(o)-(-w(u)*L0(o)^3*l0(o));
-        l00(o,u)=l0(o)-(3*w(u)*H0(o)*L0(o)^2*l0(o));
-        g00(o,u)=g0(o);
-        h00(o,u)=h0(o)-(w(u)*L0(o)^3*l0(o));
+        L00(o,u)=L0(o)-(-w(u)*H0(o)*L0(o)^3);%
+        G00(o,u)=G0(o);%
+        H00(o,u)=H0(o)-(-w(u)*L0(o)^3*l0(o));%
+        l00(o,u)=l0(o)-(3*w(u)*H0(o)*L0(o)^2*l0(o));%
+        g00(o,u)=g0(o);%
+        h00(o,u)=h0(o)-(w(u)*L0(o)^3*l0(o));%
     end
 
 end
@@ -74,10 +74,10 @@ for u=1:1:3
         h2 = q2(:,6);
         
         for ii=1:length(l2)
-            hh2(ii,o,u)=e0(o)*sin(g2(ii)+h2(ii));
-            kk2(ii,o,u)=e0(o)*cos(g2(ii)+h2(ii));
-            pp2(ii,o,u)=tan(i0(o)/2)*sin(h2(ii));
-            qq2(ii,o,u)=tan(i0(o)/2)*cos(h2(ii));
+            hh2(ii,o,u)=e0(o)*sin(g2(ii)+h2(ii));%
+            kk2(ii,o,u)=e0(o)*cos(g2(ii)+h2(ii));%
+            pp2(ii,o,u)=tan(i0(o)/2)*sin(h2(ii));%
+            qq2(ii,o,u)=tan(i0(o)/2)*cos(h2(ii));%
         end
         
         %Question 1 part
