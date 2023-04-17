@@ -49,7 +49,7 @@ end
 
 for u=1:1:3
     for o=1:1:20
-        %...Store initial elements (from above) in the vector coe0 ( no L, G, H because they are constant and hence a0, e0 and i0 is constant):
+        %...Store initial elements (from above) in the vector coe0 :
         coe2 = [L0(o) G0(o) H0(o) l0(o) g0(o) h0(o) w(u)];
         coe1 = [l00(o,u) L00(o,u)];%no g h because they are constant
         
