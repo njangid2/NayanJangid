@@ -86,21 +86,21 @@ for u=1:1:3
         
         %transforming back to old variables
         for s=1:length(ll1)
-            L1(s,o,u)=L00(o,u)-(w(u)*H00(o,u)*L00(o,u)^3);
-            G1(s,o,u)=G00(o,u);
-            H1(s,o,u)=H00(o,u)-(w(u)*L00(o,u)^3*ll1(s));
-            l1(s,o,u)=ll1(s)+(3*w(u)*H00(o,u)*L00(o,u)^2*ll1(s));
-            g1(s,o,u)=g00(o,u);
-            h1(s,o,u)=h00(o,u)+(w(u)*L00(o,u)^3*ll1(s));
+            L1(s,o,u)=L00(o,u)-(w(u)*H00(o,u)*L00(o,u)^3);%
+            G1(s,o,u)=G00(o,u);%
+            H1(s,o,u)=H00(o,u)-(w(u)*L00(o,u)^3*ll1(s));%
+            l1(s,o,u)=ll1(s)+(3*w(u)*H00(o,u)*L00(o,u)^2*ll1(s));%
+            g1(s,o,u)=g00(o,u);%
+            h1(s,o,u)=h00(o,u)+(w(u)*L00(o,u)^3*ll1(s));%
         end
         
         
         for ii=1:length(ll1)
             
-            hh1(ii,o,u)=e0(o)*sin(g1(ii,o,u)+h1(ii,o,u));
-            kk1(ii,o,u)=e0(o)*cos(g1(ii,o,u)+h1(ii,o,u));
-            pp1(ii,o,u)=tan(i0(o)/2)*sin(h1(ii,o,u));
-            qq1(ii,o,u)=tan(i0(o)/2)*cos(h1(ii,o,u));
+            hh1(ii,o,u)=e0(o)*sin(g1(ii,o,u)+h1(ii,o,u));%
+            kk1(ii,o,u)=e0(o)*cos(g1(ii,o,u)+h1(ii,o,u));%
+            pp1(ii,o,u)=tan(i0(o)/2)*sin(h1(ii,o,u));%
+            qq1(ii,o,u)=tan(i0(o)/2)*cos(h1(ii,o,u));%
         end
     end
 end
