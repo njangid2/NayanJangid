@@ -39,7 +39,7 @@ for o=1:1:20
     
         L00(o,u)=L0(o)-(-w(u)*H0(o)*L0(o)^3);%
         G00(o,u)=G0(o);%
-        H00(o,u)=H0(o)-(-w(u)*L0(o)^3*l0(o));%
+        H00(o,u)=H0(o);%
         l00(o,u)=l0(o)-(3*w(u)*H0(o)*L0(o)^2*l0(o));%
         g00(o,u)=g0(o);%
         h00(o,u)=h0(o)-(w(u)*L0(o)^3*l0(o));%
@@ -88,7 +88,7 @@ for u=1:1:3
         for s=1:length(ll1)
             L1(s,o,u)=L00(o,u)-(w(u)*H00(o,u)*L00(o,u)^3);%
             G1(s,o,u)=G00(o,u);%
-            H1(s,o,u)=H00(o,u)-(w(u)*L00(o,u)^3*ll1(s));%
+            H1(s,o,u)=H00(o,u);%
             l1(s,o,u)=ll1(s)+(3*w(u)*H00(o,u)*L00(o,u)^2*ll1(s));%
             g1(s,o,u)=g00(o,u);%
             h1(s,o,u)=h00(o,u)+(w(u)*L00(o,u)^3*ll1(s));%
