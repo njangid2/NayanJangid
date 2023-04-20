@@ -64,7 +64,7 @@ for u=1:1:3
         [t,q2] = ode45(@rates2, tspan, y2, options);
         [t,q1] = ode45(@rates1, tspan, y1, options);
         
-        %Question2 part
+        %Question2 part (equation from Q2 part)(section 2.2 report)
         %Assign the time histories mnemonic variable names:
         L2=q2(:,1);
         G2=q2(:,2);
@@ -72,7 +72,7 @@ for u=1:1:3
         l2 = q2(:,4);
         g2 = q2(:,5);
         h2 = q2(:,6);
-        
+        %converting to equinoctial element
         for ii=1:length(l2)
             hh2(ii,o,u)=e0(o)*sin(g2(ii)+h2(ii));%
             kk2(ii,o,u)=e0(o)*cos(g2(ii)+h2(ii));%
@@ -80,11 +80,11 @@ for u=1:1:3
             qq2(ii,o,u)=tan(i0(o)/2)*cos(h2(ii));%
         end
         
-        %Question 1 part
+        %Question 1 part( equations form Q1)(section 2.1.2 report)
         ll1 = q1(:,1);
         
         
-        %transforming back to old variables
+        %transforming back to old variables equtions 22-27 report
         for s=1:length(ll1)
             L1(s,o,u)=L00(o,u)-(w(u)*H00(o,u)*L00(o,u)^3);%
             G1(s,o,u)=G00(o,u);%
@@ -94,7 +94,7 @@ for u=1:1:3
             h1(s,o,u)=h00(o,u)+(w(u)*L00(o,u)^3*ll1(s));%
         end
         
-        
+        % converting to equinoctial element
         for ii=1:length(ll1)
             
             hh1(ii,o,u)=e0(o)*sin(g1(ii,o,u)+h1(ii,o,u));%
@@ -135,7 +135,7 @@ title("Plot from Hamiltonian expressed in New Delaunay variables (Question1)")
 
 
 function dfdt = rates2(t,f)
-% equation of motions (eq 31-33 from report) 
+% equation of motions (eq 28-33 from report) 
 L=f(1);
 G=f(2);
 H=f(3);
@@ -155,7 +155,7 @@ dfdt = [Ldot Gdot Hdot ldot gdot hdot wdot]';
 end 
 
 function dfdt = rates1(t,f)
-% equation of motions (eq 31-33 from report) 
+% equation of motions (eq 19 from report because everthing else is constant) 
 l = f(1);
 L=f(2);
 ldot=1/(L^3);
